@@ -6,6 +6,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<nav th:replace="~{Partials/Navbar :: navbar}"></nav>
 <div class="container mt-5" style="max-width: 400px;">
     <h2 class="mb-4 text-center">Login</h2>
     <form th:action="@{/user/login}" method="post">
@@ -19,7 +20,8 @@
         </div>
         <button type="submit" class="btn btn-success w-100">Login</button>
         <p class="mt-3 text-center">Don't have an account? <a th:href="@{/user/register}">Register</a></p>
-    </form>
+    </form>   
 </div>
+<div th:replace="Partials/Footer :: footer"></div>
 </body>
 </html>
